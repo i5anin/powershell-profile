@@ -4,7 +4,7 @@
 
 ---
 
-## 0) Установка / обновление PowerShell 7+
+## 0. Установка / обновление PowerShell 7+
 
 Официальная инструкция Microsoft Learn:
 - [Установка PowerShell на Windows (актуальная версия)](https://learn.microsoft.com/ru-ru/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.5)
@@ -16,7 +16,7 @@
 - [PowerShell — Releases](https://github.com/PowerShell/PowerShell/releases)
 
 
-## 1) Где находится профиль PowerShell 7+
+## 1. Где находится профиль PowerShell 7+
 
 PowerShell сам показывает **ожидаемый путь** к профилю:
 
