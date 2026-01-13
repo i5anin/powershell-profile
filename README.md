@@ -26,7 +26,9 @@ $PROFILE
 
 Обычно для `PowerShell` 7+ это:
 ```%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1```
+
 Папка профиля:
 ```%USERPROFILE%\Documents\PowerShell```
+
 Разблокировать профиль
 ```Unblock-File -Path $PROFILE```
