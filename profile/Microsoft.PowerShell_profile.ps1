@@ -92,28 +92,6 @@ function Get-GitPromptData {
     }
 }
 
-function Get-WindowsIconColorCode {
-    $colors = @(
-        $PSStyle.Foreground.FromRgb('#98c379')
-        $PSStyle.Foreground.FromRgb('#e06c75')
-        $PSStyle.Foreground.FromRgb('#61afef')
-        $PSStyle.Foreground.FromRgb('#e5c07b')
-    )
-
-    if ($null -eq $script:WindowsIconColorIndex) {
-        $script:WindowsIconColorIndex = 0
-    }
-
-    $color = $colors[$script:WindowsIconColorIndex]
-    $script:WindowsIconColorIndex++
-
-    if ($script:WindowsIconColorIndex -ge $colors.Count) {
-        $script:WindowsIconColorIndex = 0
-    }
-
-    return $color
-}
-
 function prompt {
     $reset = $PSStyle.Reset
     $darkGray = $PSStyle.Foreground.BrightBlack
@@ -124,8 +102,6 @@ function prompt {
     $magenta = $PSStyle.Foreground.BrightMagenta
     $red = $PSStyle.Foreground.BrightRed
 
-    $icon = "⊞"
-    $iconColor = Get-WindowsIconColorCode
     $userName = [Environment]::UserName
     $computerName = $env:COMPUTERNAME
     $currentPath = (Get-Location).Path
@@ -134,9 +110,7 @@ function prompt {
     $topLine = ""
     $topLine += "${darkGray}┌──(${reset}"
     $topLine += "${cyan}${userName}${reset}"
-    $topLine += " "
-    $topLine += "${iconColor}${icon}${reset}"
-    $topLine += " "
+    $topLine += "${darkGray}@${reset}"
     $topLine += "${cyan}${computerName}${reset}"
     $topLine += "${darkGray})-[${reset}"
     $topLine += "${yellow}${currentPath}${reset}"
@@ -191,5 +165,5 @@ function .. {
 }
 
 function ... {
-Set-Location ../..
+    Set-Location ../..
 }
