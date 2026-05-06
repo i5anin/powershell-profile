@@ -25,16 +25,24 @@ $PROFILE
 ```
 
 Обычно для `PowerShell` 7+ это:
-```%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1```
+```powershell
+%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```
 
 Папка профиля:
-```%USERPROFILE%\Documents\PowerShell```
+```powershell
+%USERPROFILE%\Documents\PowerShell
+```
 
 Разблокировать профиль
-```Unblock-File -Path $PROFILE```
+```powershell
+Unblock-File -Path $PROFILE
+```
 
 Отключить обновления
-```[System.Environment]::SetEnvironmentVariable('POWERSHELL_UPDATECHECK', 'Off', 'Machine')```
+```powershell
+[System.Environment]::SetEnvironmentVariable('POWERSHELL_UPDATECHECK', 'Off', 'Machine')
+```
 
 Последний релиз PowerShell (GitHub Releases):
 - [PowerShell — Releases (Latest)](https://github.com/PowerShell/PowerShell/releases/latest)
