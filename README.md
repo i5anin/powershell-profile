@@ -32,3 +32,10 @@ $PROFILE
 
 Разблокировать профиль
 ```Unblock-File -Path $PROFILE```
+
+Отключить обновления
+```[System.Environment]::SetEnvironmentVariable('POWERSHELL_UPDATECHECK', 'Off', 'Machine')```
+
+Последний релиз PowerShell (GitHub Releases):
+- [PowerShell — Releases (Latest)](https://github.com/PowerShell/PowerShell/releases/latest)
+
